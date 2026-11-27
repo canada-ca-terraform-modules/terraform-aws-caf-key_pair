@@ -9,6 +9,8 @@ This file must be updated as part of every change to this module.
 
 ### Added
 
+- `tests/`: the Python tests of `bin/create_key_pair.sh` and `bin/delete_key_pair.sh` (a stub `aws`), moved from the Board repository.
+
 - Initial release: one EC2 key pair per module instance, declared with a single `key_pair = each.value`, from one of three places: made by
   the module at the apply and deleted at the destroy with its Secrets Manager secret (the default; `bin/create_key_pair.sh` and
   `bin/delete_key_pair.sh`, run by a `terraform_data`, pipe the private key from EC2 to the secret so it never enters the state), looked
